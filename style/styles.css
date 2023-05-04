@@ -19,6 +19,7 @@ section {
     align-items: center;
     margin-top: 60px;
     margin-left: 60px;
+    margin-bottom: 50px;
 }
 form{
     margin-right: 30px;
@@ -38,4 +39,39 @@ input{
     font-weight: 800;
     font-size: 2em;
     padding: 0px 4px 0 4px;
+}
+.linebtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80px;
+    
+}
+hr {
+    height: 1px;
+    width: 600px;
+    border: solid;
+    border-width: .5px;
+    border-radius: 10px;
+    background-color:  hsl(0, 0%, 94%);
+    border-color: hsl(0, 0%, 94%);
+}
+button{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    margin-left: -60px; 
+    border: none;
+}
+button:hover{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: hsl(245, 100%, 65%);
+    margin-left: -60px; 
+    border: none;
 }
