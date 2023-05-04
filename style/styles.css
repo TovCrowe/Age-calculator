@@ -1,0 +1,41 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px 20px 160px 20px;
+}
+.dates-inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+form{
+    margin-right: 30px;
+}
+p{
+    margin-bottom: 5px;
+    color: hsl(0, 1%, 44%)
+}
+input{
+    width: 140px; 
+    height: 60px; 
+    border: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: hsl(0, 0%, 94%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    padding: 0px 4px 0 4px;
+}
