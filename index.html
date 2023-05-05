@@ -21,23 +21,27 @@
 
     <div class="dates-inputs">
         <form>
-          <p>D A Y</p>
-          <input type="text" name="date" id="date">
+          <p class='Pinputs'>D A Y</p>
+          <input type="number" name="date" id="day" placeholder="DD">
         </form>
         <form>
-          <p>M O N T H</p>
-          <input type="text" name="date" id="date">
+          <p class='Pinputs'>M O N T H</p>
+          <input type="number" name="date1" id="months" placeholder='MM'>
         </form>
         <form>
-          <p>Y E A R</p>
-          <input type="text" name="date" id="date">
+          <p class='Pinputs'>Y E A R</p>
+          <input type="number" name="date2" id="years" placeholder="YYYY">
         </form>
     </div>
     <div class="linebtn">
       <hr>
-      <button type="button"><img src="./assets/images/icon-arrow.svg"></button>
+      <button id="buttonLoad" type="button"><img src="./assets/images/icon-arrow.svg"></button>
     </div>
-
+    <div class="ageresults">
+      <p class="results"><span class="years">--</span>years</p>
+      <p class="results"><span class="months">--</span>months</p>
+      <p class="results"><span class="days">--</span>days</p>
+    </div>
   
 
 </section>
@@ -46,5 +50,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>-->
+  <script src="./indexx.js"></script>
 </body>
 </html>
