@@ -1,4 +1,3 @@
-
 const btn = document.querySelector('#buttonLoad');
 btn.addEventListener('click', calculateAge);
 
@@ -28,7 +27,7 @@ function errorEmptyInput (arg) {
     errorMsg.style.height = '0px'; // set a fixed height for the error message
     arg.appendChild(errorMsg);
   }
-  errorMsg.textContent = 'Please enter a valid input';
+  errorMsg.textContent = 'Please dont leave space empty';
 }
 
 function notValidDate (form) {
@@ -55,6 +54,9 @@ function calculateAge() {
   const formItemsDay = document.querySelector('.form-day');
   const formItemsMonth = document.querySelector('.form-month');
   const formItemsYear = document.querySelector('.form-year');
+  const displayDay = document.querySelector('.days')
+  const displayMonth = document.querySelector('.months')
+  const displayYear = document.querySelector('.years')
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear()
 
@@ -72,7 +74,7 @@ function calculateAge() {
     notValidDate(formItemsMonth)
     notValidDate(formItemsYear)
   }
-  else if((month === 4 || month === 6 || month === 9 || month === 11) && day < 30){
+  else if((month === 4 || month === 6 || month === 9 || month === 11) && day > 30){
     notValidDate(formItemsDay)
     notValidDate(formItemsMonth)
     notValidDate(formItemsYear)
@@ -100,17 +102,33 @@ function calculateAge() {
       }
     }
   }
-  else {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth() + 1;
-    const currentDay = currentDate.getDate()
+else {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+  const currentDay = currentDate.getDate();
 
-    
+  let showAge = currentYear - year;
+  let showMonth = currentMonth - month;
+  let showDay = currentDay - day;
+
+  if (showDay < 0) {
+    showMonth--;
+    const daysInPreviousMonth = new Date(currentYear, currentMonth - 1, 0).getDate();
+    showDay = daysInPreviousMonth + showDay + 1;
+  }
+
+  if (showMonth < 0) {
+    showAge--;
+    showMonth = 12 + showMonth;
+  }
+
+
+
+  displayYear.textContent = showAge;
+  displayDay.textContent = showDay;
+  displayMonth.textContent = showMonth;
 }
-
-
-
 
 
 }
